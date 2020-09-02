@@ -1,0 +1,69 @@
+﻿@model SpaParadise.Models.Service
+
+@{
+    ViewBag.Title = "ViewService";
+}
+
+<h2>ViewService</h2>
+
+
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl style="font-size:25px" class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceType)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceImage)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.ServiceImage)" width="250" height=" 250" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specialist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specialist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+    </dl>
+</div>
+
+<p>
+    <a href="@Url.Action("BookNow","Booking",new {id=Model.ServiceId})"
+       class="btn btn-primary btn-lg">Book Now</a>
+
+    @Html.ActionLink("Back to List", "ServiceList")
+</p>

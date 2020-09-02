@@ -1,0 +1,23 @@
+﻿@model SpaParadise.Models.Customer
+@{
+    ViewBag.Title = "CustomerDash";
+}
+
+
+<h2>CustomerDash</h2>
+
+<p>
+    <a href="@Url.Action("ServiceList","Service")"
+       class="btn btn-primary btn-lg">View Services</a>
+</p>
+<p>
+    <a href="@Url.Action("CartDetails","Cart")"
+       class="btn btn-primary btn-lg">Cart</a>
+</p>
+
+<p>
+
+    <a href="@Url.Action("Details","Customer")"
+       class="btn btn-primary btn-lg">View Details</a>
+
+</p>

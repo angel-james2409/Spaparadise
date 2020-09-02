@@ -1,0 +1,20 @@
+﻿@model SpaParadise.Models.Customer
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+
+
+<h3>Are you Sure You Want to delete this ?</h3>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-action no-colour">
+        <input type="submit" value="Delete" clss="btn btn-default" />
+        @Html.ActionLink("CustomerSignup", "Customer");
+
+    </div>
+}

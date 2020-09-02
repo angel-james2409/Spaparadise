@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SpaParadise.Models.Customer>
+
+@using SpaParadise.Models;
+
+@{
+    ViewBag.Title = "CustomerName";
+}
+
+<h2>CustomerName</h2>
+
+
+
+<ul>
+    @foreach (Customer c in @Model)
+    {
+        <li>
+            @Html.ActionLink(c.CustomerName, "Details", new { id = c.CustomerId })
+        </li>
+    }
+</ul>
+</div>
+
+<p>
+    <a href="@Url.Action("AdminDash","Admin")"
+       class="btn btn-primary btn-lg">Back</a>
+</p>

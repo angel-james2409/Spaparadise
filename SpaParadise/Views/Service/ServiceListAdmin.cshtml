@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SpaParadise.Models.Service>
+
+@{
+    ViewBag.Title = "ServiceListAdmin";
+}
+
+<h2>ServiceListAdmin</h2>
+
+
+
+<table style="font-size:40px" class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceType)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Specialist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceType)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ServiceId }) |
+                @Html.ActionLink("Details", "ViewService", new { id = item.ServiceId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ServiceId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    <a href="@Url.Action("AdminDash","Admin")"
+       class="btn btn-primary btn-lg">Back</a>
+</p>

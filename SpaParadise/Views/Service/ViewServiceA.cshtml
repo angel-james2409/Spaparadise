@@ -1,0 +1,65 @@
+﻿@model SpaParadise.Models.Service
+
+@{
+    ViewBag.Title = "ViewServiceA";
+}
+
+<h2>ViewService</h2>
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceType)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceImage)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.ServiceImage)" width="250" height=" 250" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specialist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specialist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+    </dl>
+</div>
+
+<p>
+
+    @Html.ActionLink("Back to List", "ServiceListAdmin")
+</p>

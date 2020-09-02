@@ -1,0 +1,25 @@
+﻿@model SpaParadise.Models.Cart
+
+
+@{
+    ViewBag.Title = "Payment";
+}
+
+<h2>Payment</h2>
+
+<h3>
+    Your Payment is @TempData["Total"].ToString();
+</h3>
+
+
+@using (Html.BeginForm("Qrcode", "Booking", FormMethod.Post))
+{
+
+    <input type="submit" value="Generate" />
+}
+
+<hr />
+@if (ViewBag.QRCode != null)
+{
+    <img src="@ViewBag.QRCode" style="width:200px;height:200px;" />
+}

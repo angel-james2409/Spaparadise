@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Map";
+}
+
+<style type="text/css">
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+        height: 400px;
+        width: 400px;
+    }
+</style>
+
+<div class="row">
+    <div id="map"></div>
+
+    <script>
+        "use strict";
+
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 13.082680,
+                    lng: 80.270721
+                },
+                zoom: 8
+            });
+        }
+    </script>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxU6aKsr4aLUJ3_vG9eEgeLdQWNY39Nl0&callback=initMap"
+            type="text/javascript"></script>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

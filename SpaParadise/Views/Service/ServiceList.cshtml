@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SpaParadise.Models.Service>
+@using SpaParadise.Models;
+
+@{
+    ViewBag.Title = "ServiceList";
+}
+
+
+
+<div style=" font-size:30px;font-family:Times New Roman">
+    <h2>Service</h2>
+    <ul>
+        @foreach (Service s in @Model)
+        {
+            <li>
+
+                @Html.ActionLink(s.ServiceName, "ViewService", new { id = s.ServiceId })
+
+            </li>
+        }
+    </ul>
+</div>

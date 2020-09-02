@@ -1,0 +1,87 @@
+﻿@model SpaParadise.Models.Booking
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+
+<div>
+    <h4>BOOKING</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookingId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specialist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specialist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookingTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookingTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookingDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookingId }) |
+    @Html.ActionLink("Back to List", "CustomerDash")
+</p>

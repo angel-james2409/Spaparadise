@@ -1,0 +1,33 @@
+﻿@model  SpaParadise.Models.Booking
+@{
+    ViewBag.Title = "Qrcode";
+}
+
+<h2 style="font-size:45px">Qrcode</h2>
+
+
+<div style="font-size:35px">
+
+    <p>BarCode Generated Sucessfully!!!</p>
+    <br />
+    <p>Feel the Real Paradise!!!</p>
+    </br>
+</div>
+
+
+@using (Html.BeginForm("Qrcode", "Booking", FormMethod.Post))
+{
+
+    <input type="submit" value="Generate" />
+}
+
+<hr />
+@if (ViewBag.QRCode != null)
+{
+    <img src="@ViewBag.QRCode" style="width:200px;height:200px;" />
+}
+
+<div style="font-size:30px">
+    <a href="@Url.Action("CustomerDash","Customer")"
+       class="btn btn-primary btn-lg">Back</a>
+</div>

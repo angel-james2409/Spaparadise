@@ -1,0 +1,58 @@
+﻿
+@model SpaParadise.Models.Customer
+
+@{ ViewBag.Title = "Login"; }
+
+
+@using (Html.BeginForm("Login", "Customer", FormMethod.Post))
+{
+
+    <table style="font-size:25px;text-align:right">
+        <tr>
+            <td></td>
+            <td style="text-decoration:underline">Online Spa  Booking</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(Model => Model.PhoneNo)
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.PhoneNo)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                @Html.ValidationMessageFor(model => model.PhoneNo)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(Model => Model.Password)
+            </td>
+            <td>
+                @Html.EditorFor(Model => Model.Password)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                @Html.ValidationMessageFor(model => model.Password)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="name" value="Login" />
+                <input type="reset" name="name" value="clear" />
+            </td>
+        </tr>
+    </table>}
+
+
+
+<a style="font-weight:bold;font-size:15px;text-align:center href=" @Url.Action("Register", "CustomerSignup")
+   class="btn btn-primary btn-lg">REGISTER</a>
+
+
+
